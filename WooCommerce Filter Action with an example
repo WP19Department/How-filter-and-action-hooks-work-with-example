@@ -1,45 +1,18 @@
-Hoooks for wordpress:
+/*
+WooCommerce Product Hooks:
 
-We can create hook with simgple calling add_action() function here is example for wordpress hooks
-
-  add_action('hook_name','function_name');
-
-- hooks can be used for make some changes in output for update the static values / default values.
-- Hooks can be start works after sucessfully perform any specific operation.
-- We need to add this hook in the active theme's function.php file
-
-Syntex:
-
-function function_name(){
-  perform opetion
-}
-add_action('hook_name','funciton_name');
-
-
-Filter for wordpress:
-
-We can create filter with same way like hook, we just need to replace action with filter.
-
-  add_filter('filter_name','function_name');
+Woccomerce product hooks work for woocommerce product page. if you want to add some code or display massege or display anything you want. here is two hooks for wocomerce porduct page.
+ 
+  1 - woocommerce_before_main_content
+  2 - woocommerce_after_main_content 
   
-- filter can be start working during execution time, when we want to change the any static value during execution time then we can use filters in wordpress
-- we can also add the filters in function.php files
-
-Syntex:
-
-  add_filter('filter_name','function_name');
-  funciton function_name(){
-   add some code here
-  }
-
-
-Example: 
-
-function wporg_css_body_class( $classes ) {
-    if ( ! is_admin() ) {
-        $classes[] = 'wporg-is-awesome';
-    }
-    return $classes;
+ 1 - Woocommerce_before_main_content:
+ 
+ using this hook we can prin the some message before the main content
+ */
+ 
+add_action('Woocommerce_before_main_content','my_cus_message');
+funciton my_cus_message(){
+  echo "you need to buy at list 5 product"; 
 }
-add_filter( 'body_class', 'wporg_css_body_class' );
-
+ 
