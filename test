@@ -14,5 +14,6 @@ Woccomerce product hooks work for woocommerce product page. if you want to add s
 add_action('Woocommerce_before_main_content','my_cus_message');
 funciton my_cus_message(){
   echo "you need to buy at list 5 product"; 
+  echo "you need to buy at list 5 product";echo "you need to buy at list 5 product";echo "you need to buy at list 5 product";echo "you need to buy at list 5 product";
 }
  
