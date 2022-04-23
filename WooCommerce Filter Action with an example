@@ -16,3 +16,23 @@ funciton my_cus_message(){
   echo "you need to buy at list 5 product"; 
 }
  
+/*
+
+2 - woocommerce_after_main_content 
+
+using this hook we can print the content before footer
+
+
+*/
+
+add_action('woocommerce_after_main_content ','cus_after_main_contact');
+
+function cus_after_main_contact(){
+  
+  echo "print the data here";
+}
+
+/*
+
+
+*/
