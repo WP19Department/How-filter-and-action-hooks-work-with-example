@@ -37,10 +37,10 @@ Syntex:
 
 Example: 
 
-function wporg_css_body_class( $classes ) {
+function cus_css_body_class( $classes ) {
     if ( ! is_admin() ) {
         $classes[] = 'wporg-is-awesome';
     }
     return $classes;
 }
-add_filter( 'body_class', 'wporg_css_body_class' );
+add_filter( 'body_class', 'cus_css_body_class' );
