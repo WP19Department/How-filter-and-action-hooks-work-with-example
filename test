@@ -1,0 +1,18 @@
+/*
+WooCommerce Product Hooks:
+
+Woccomerce product hooks work for woocommerce product page. if you want to add some code or display massege or display anything you want. here is two hooks for wocomerce porduct page.
+ 
+  1 - woocommerce_before_main_content
+  2 - woocommerce_after_main_content 
+  
+ 1 - Woocommerce_before_main_content:
+ 
+ using this hook we can prin the some message before the main content
+ */
+ 
+add_action('Woocommerce_before_main_content','my_cus_message');
+funciton my_cus_message(){
+  echo "you need to buy at list 5 product"; 
+}
+ 
